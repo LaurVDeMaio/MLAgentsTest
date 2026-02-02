@@ -176,10 +176,10 @@ public class AgentController : Agent
     // // agents momentum
     // sensor.AddObservation(rb.linearVelocity);
 
-    // // Direction to the player (3 floats)
-    // // "which way" to turn
-    // Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
-    // sensor.AddObservation(dirToPlayer);
+    // Direction to the player (3 floats)
+    // "which way" to turn
+    Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
+    sensor.AddObservation(dirToPlayer);
 }
 
     // List<GameObject> GetNearbyEntities()
