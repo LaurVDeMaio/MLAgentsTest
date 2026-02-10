@@ -20,8 +20,8 @@ public class AgentController : Agent
 
     Stats stats;
 
-    private float moveForce = 2.0f;
-    private float turnForce = 150.0f; // Increased for better responsiveness
+    private float moveForce = 1.0f;
+    private float turnForce = 100.0f; // Increased for better responsiveness
 
     // Constants for rewards
     private float deathReward = -1.0f;
@@ -135,6 +135,8 @@ public class AgentController : Agent
     {
         move = actions.ContinuousActions[0];
         turn = actions.ContinuousActions[1];
+
+        CalcMoveReward();
     }
 
     private void FixedUpdate()
@@ -145,6 +147,11 @@ public class AgentController : Agent
         rb.AddForce(transform.forward * move * moveForce, ForceMode.Acceleration);
         transform.Rotate(Vector3.up * turn * turnForce * Time.fixedDeltaTime);
 
+        
+    }
+
+    void CalcMoveReward()
+    {
         // Calculate Reward Logic
         Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
         
