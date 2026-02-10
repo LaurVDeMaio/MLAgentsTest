@@ -106,6 +106,10 @@ public class AgentController : Agent
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
 
+        var playerb = player.GetComponent<Rigidbody>();
+        playerb.linearVelocity = Vector3.zero;
+        playerb.angularVelocity = Vector3.zero;
+
         ResetEnvironment();
         lastDist = Vector3.Distance(player.transform.localPosition, transform.localPosition);
     }
@@ -144,7 +148,7 @@ public class AgentController : Agent
         if (inHumanControl) return;
 
         // Apply Movement
-        rb.AddForce(transform.forward * move * moveForce, ForceMode.Acceleration);
+        rb.AddForce(transform.forward * move * moveForce, ForceMode.Force);
         transform.Rotate(Vector3.up * turn * turnForce * Time.fixedDeltaTime);
 
         
