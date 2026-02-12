@@ -47,11 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Goal"))
         {
-            Debug.Log("<color=#0000ff>Player Reached Goal</color>");
-            agentController.SetReward(agentController.failReward);
-            agentController.EndEpisode();
-
-            stats.AddGoal(agentController.episodeNum, 0);
+            agentController.PlayerGotGoal();
         }
        
 

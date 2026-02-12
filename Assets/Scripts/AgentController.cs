@@ -20,12 +20,14 @@ public class AgentController : Agent
 
     Stats stats;
 
-    private float moveForce = 1.0f;
+    const float MAX_MAGNITUDE = 0.5f;
+
+    private float moveForce = 0.25f;
     private float turnForce = 100.0f; // Increased for better responsiveness
 
     // Constants for rewards
-    private float deathReward = -1.0f;
-    public float failReward = -1.0f;
+    private float deathReward = -5.0f;
+    private float failReward = -3.0f;
     private float goalReward = 5.0f;
     private float stepPenalty = -0.001f; // Existential penalty to encourage speed
 
@@ -88,10 +90,10 @@ public class AgentController : Agent
         goal.transform.localPosition = FindSafePos(trainingArea.transform.position, 0.74f);
     
         // 2. Move Player (far enough from Goal)
-        player.transform.localPosition = FindSafePos(trainingArea.transform.position, 0.74f, goal, 5.0f);
+        player.transform.localPosition = FindSafePos(trainingArea.transform.position, 0.74f, goal, 6.0f);
     
         // 3. Move Agent (far enough from Player to prevent instant-win)
-        transform.localPosition = FindSafePos(trainingArea.transform.position, 1.0f, player, 4.0f);
+        transform.localPosition = FindSafePos(trainingArea.transform.position, 1.0f, player, 5.0f);
 
         // 4. Move Obstacles
         for (int i = 0; i < obsCount; i++)
@@ -149,6 +151,10 @@ public class AgentController : Agent
 
         // Apply Movement
         rb.AddForce(transform.forward * move * moveForce, ForceMode.Force);
+        if (rb.linearVelocity.magnitude > MAX_MAGNITUDE)
+        {
+            rb.linearVelocity = rb.linearVelocity.normalized * MAX_MAGNITUDE;
+        }
         transform.Rotate(Vector3.up * turn * turnForce * Time.fixedDeltaTime);
 
         
@@ -165,7 +171,13 @@ public class AgentController : Agent
         // Small incremental reward for moving the right way
         if(rb.linearVelocity.magnitude > 0.1f) 
         {
-            AddReward(velocityAlignment * 0.01f);
+            //Debug.Log(velocityAlignment);
+            if (velocityAlignment > 0) {
+                AddReward(velocityAlignment * 0.002f);
+            } else
+            {
+                //AddReward(velocityAlignment * 0.001f);
+            }
         }
 
         // Time penalty
@@ -188,11 +200,21 @@ public class AgentController : Agent
         }
     }
 
+    public void PlayerGotGoal()
+    {
+        Debug.Log("<color=#0000ff>Player Reached Goal</color>");
+        SetReward(failReward);
+        stats.AddGoal(episodeNum, 0);
+        EndEpisode();
+    }
+
     public override void Heuristic(in ActionBuffers actionsOut)
     {
+        /*
         var continuousActionsOut = actionsOut.ContinuousActions;
         continuousActionsOut[0] = Input.GetAxis("Vertical");
         continuousActionsOut[1] = Input.GetAxis("Horizontal");
+        */
     }
 }
 
