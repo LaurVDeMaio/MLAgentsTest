@@ -27,6 +27,7 @@ public class AgentController : Agent
 
     // Constants for rewards
     private float deathReward = -5.0f;
+    private float touchedGoalReard = -5.0f;
     private float failReward = -3.0f;
     private float goalReward = 5.0f;
     private float stepPenalty = -0.001f; // Existential penalty to encourage speed
@@ -181,7 +182,7 @@ public class AgentController : Agent
         }
 
         // Time penalty
-        AddReward(stepPenalty);
+        //AddReward(stepPenalty);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -192,9 +193,15 @@ public class AgentController : Agent
             stats.AddGoal(episodeNum, 1);
             EndEpisode();
         }
-        else if (collision.gameObject.CompareTag("Death") || collision.gameObject.CompareTag("Goal"))
+        else if (collision.gameObject.CompareTag("Death"))
         {
-            SetReward(collision.gameObject.CompareTag("Death") ? deathReward : failReward);
+            SetReward(deathReward);
+            stats.AddGoal(episodeNum, 0);
+            EndEpisode();
+        }
+        else if (collision.gameObject.CompareTag("Goal"))
+        {
+            SetReward(touchedGoalReard);
             stats.AddGoal(episodeNum, 0);
             EndEpisode();
         }
