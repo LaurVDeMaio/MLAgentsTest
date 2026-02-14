@@ -49,7 +49,13 @@ public class PlayerController : MonoBehaviour
         {
             agentController.PlayerGotGoal();
         }
-       
+    }
 
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Goal"))
+        {
+            agentController.PlayerGotGoal();
+        }
     }
 }

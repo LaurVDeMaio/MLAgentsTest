@@ -199,12 +199,15 @@ public class AgentController : Agent
             stats.AddGoal(episodeNum, 0);
             EndEpisode();
         }
+
+        /*
         else if (collision.gameObject.CompareTag("Goal"))
         {
             SetReward(touchedGoalReard);
             stats.AddGoal(episodeNum, 0);
             EndEpisode();
         }
+        */
     }
 
     public void PlayerGotGoal()
