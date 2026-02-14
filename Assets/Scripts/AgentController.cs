@@ -9,9 +9,9 @@ public class AgentController : Agent
     [SerializeField] public bool inHumanControl;
 
     GameObject goal, trainingArea, environment, player;
-    GameObject[] obstacles;
-    public int obsCount = 1;
-    public GameObject obstacle;
+    //GameObject[] obstacles;
+    //public int obsCount = 1;
+    //public GameObject obstacle;
 
     Vector3 startingPosition;
     float lastDist;
@@ -39,7 +39,7 @@ public class AgentController : Agent
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stats>();
 
         trainingArea = transform.parent.gameObject;
-        if (trainingArea.name != "TrainingArea") trainingArea = trainingArea.transform.parent.gameObject;
+        if (trainingArea.name != "TrainingAreaCam") trainingArea = trainingArea.transform.parent.gameObject;
 
         environment = trainingArea.transform.Find("Environment").gameObject;
         player = trainingArea.transform.Find("Player").gameObject;
@@ -47,12 +47,12 @@ public class AgentController : Agent
 
         startingPosition = transform.localPosition;
 
-        obstacles = new GameObject[obsCount];
-        for (int i = 0; i < obsCount; i++)
-        {
-            var pos = new Vector3(0, 10000, 0);
-            obstacles[i] = Instantiate(obstacle, pos, Quaternion.identity, environment.transform);
-        }
+        // obstacles = new GameObject[obsCount];
+        // for (int i = 0; i < obsCount; i++)
+        // {
+        //     var pos = new Vector3(0, 10000, 0);
+        //     obstacles[i] = Instantiate(obstacle, pos, Quaternion.identity, environment.transform);
+        // }
     }
 
     public Vector3 FindSafePos(Vector3 areaCenter, float y, GameObject avoidObject = null, float minDistance = 3.0f)
@@ -96,10 +96,10 @@ public class AgentController : Agent
         transform.localPosition = FindSafePos(trainingArea.transform.position, 1.0f, player, 5.0f);
 
         // 4. Move Obstacles
-        for (int i = 0; i < obsCount; i++)
-        {
-            obstacles[i].transform.localPosition = FindSafePos(trainingArea.transform.position, 0.5f);
-        }
+        // for (int i = 0; i < obsCount; i++)
+        // {
+        //     obstacles[i].transform.localPosition = FindSafePos(trainingArea.transform.position, 0.5f);
+        // }
     }
 
     public override void OnEpisodeBegin()

@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         trainingArea = transform.parent.gameObject;
-        if (trainingArea.name != "TrainingArea") trainingArea = trainingArea.transform.parent.gameObject;
+        if (trainingArea.name != "TrainingAreaCam") trainingArea = trainingArea.transform.parent.gameObject;
 
         environment = trainingArea.transform.Find("Environment").gameObject;
         goal = trainingArea.transform.Find("Goal").gameObject;
