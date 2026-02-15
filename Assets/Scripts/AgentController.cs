@@ -40,7 +40,7 @@ public class AgentController : Agent
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stats>();
 
         trainingArea = transform.parent.gameObject;
-        if (trainingArea.name != "TrainingArea") trainingArea = trainingArea.transform.parent.gameObject;
+        if (trainingArea.name != "TrainingAreaCam") trainingArea = trainingArea.transform.parent.gameObject;
 
         environment = trainingArea.transform.Find("Environment").gameObject;
         player = trainingArea.transform.Find("Player").gameObject;
