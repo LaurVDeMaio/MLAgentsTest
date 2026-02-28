@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 7402142528359079378}
   - component: {fileID: 3403464016955188898}
   - component: {fileID: 5264197006239604369}
+  - component: {fileID: 96536296008650570}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -601,7 +602,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3177602071807790927}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 2
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
@@ -689,6 +690,27 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &96536296008650570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3177602071807790927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282f342c2ab144bf38be65d4d0c4e07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 3403464016955188898}
+  m_SensorName: CameraSensor
+  m_Width: 84
+  m_Height: 84
+  m_Grayscale: 1
+  m_ObservationType: 0
+  m_RuntimeCameraEnable: 0
+  m_ObservationStacks: 2
+  m_Compression: 1
 --- !u!1 &4127620775545591495
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +979,6 @@ GameObject:
   - component: {fileID: 962825503300407143}
   - component: {fileID: 8830129188477593972}
   - component: {fileID: 7535275245468075499}
-  - component: {fileID: 2808187251205842226}
   m_Layer: 0
   m_Name: Agent
   m_TagString: Agent
@@ -1146,30 +1167,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c9d521e5ef4759a8246a07d52221e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DecisionPeriod: 5
+  DecisionPeriod: 2
   DecisionStep: 0
   TakeActionsBetweenDecisions: 1
---- !u!114 &2808187251205842226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6859992789644645344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 282f342c2ab144bf38be65d4d0c4e07d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Camera: {fileID: 3403464016955188898}
-  m_SensorName: CameraSensor
-  m_Width: 84
-  m_Height: 84
-  m_Grayscale: 1
-  m_ObservationType: 0
-  m_RuntimeCameraEnable: 0
-  m_ObservationStacks: 1
-  m_Compression: 1
 --- !u!1 &6892923998178453033
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,7 +29,7 @@ public class AgentController : Agent
     private float deathReward = -5.0f;
     private float touchedGoalReard = -5.0f;
     private float failReward = -3.0f;
-    private float goalReward = 5.0f;
+    private float goalReward = 9.0f;
     private float stepPenalty = -0.001f; // Existential penalty to encourage speed
 
     public int episodeNum = 0;
