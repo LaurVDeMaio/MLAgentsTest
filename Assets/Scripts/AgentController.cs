@@ -178,6 +178,8 @@ public class AgentController : Agent
                 //AddReward(velocityAlignment * 0.001f);
             }
         }
+<<<<<<< Updated upstream
+=======
     }
 
     void OnCollisionEnter(Collision collision)
@@ -214,4 +216,5 @@ public class AgentController : Agent
         */
     }
 }
+<<<<<<< Updated upstream
 
