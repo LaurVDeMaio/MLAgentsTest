@@ -124,16 +124,28 @@ public class AgentController : Agent
         sensor.AddObservation(localVelocity.x);
         sensor.AddObservation(localVelocity.z);
 
-        // 2. Normalized Distance (1 float)
-        float dist = Vector3.Distance(player.transform.localPosition, transform.localPosition);
-        sensor.AddObservation(dist / 20f); 
+        // // 2. Normalized Distance (1 float)
+        // float dist = Vector3.Distance(player.transform.localPosition, transform.localPosition);
+        // sensor.AddObservation(dist / 20f); 
 
-        // 3. Direction to player (3 floats)
-        Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
-        sensor.AddObservation(dirToPlayer);
+        // // 3. Direction to player (3 floats)
+        // Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
+        // sensor.AddObservation(dirToPlayer);
         
-        // 4. Agent Forward Direction (3 floats)
-        sensor.AddObservation(transform.forward);
+        // // 4. Agent Forward Direction (3 floats)
+        // sensor.AddObservation(transform.forward);
+
+        //for grid sensor below
+
+        Vector3 agentVelocity = rb.linearVelocity;
+        Vector3 playerVelocity = player.GetComponent<Rigidbody>().linearVelocity;
+        Vector3 relativeVelocity = agentVelocity - playerVelocity;
+        //3 floats for relative velocity
+        sensor.AddObservation(relativeVelocity.normalized);
+
+        //relative positon of player to agent (3 floats)
+        Vector3 relativePosition = player.transform.localPosition - transform.localPosition;
+        sensor.AddObservation(relativePosition.normalized);
     }
 
     public override void OnActionReceived(ActionBuffers actions)

@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 8
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -1044,8 +1044,8 @@ MonoBehaviour:
   m_ColliderMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_MaxColliderBufferSize: 500
-  m_InitialColliderBufferSize: 4
+  m_MaxColliderBufferSize: 16
+  m_InitialColliderBufferSize: 5
   m_DebugColors:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.22167921, g: 1, b: 0, a: 0}
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_GizmoYOffset: 0
   m_ShowGizmos: 1
   m_CompressionType: 1
-  m_ObservationStacks: 2
+  m_ObservationStacks: 1
 --- !u!1 &6892923998178453033
 GameObject:
   m_ObjectHideFlags: 0
