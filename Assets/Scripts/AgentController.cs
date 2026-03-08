@@ -20,9 +20,9 @@ public class AgentController : Agent
 
     Stats stats;
 
-    const float MAX_MAGNITUDE = 0.5f;
+    const float MAX_MAGNITUDE = 2.0f;
 
-    private float moveForce = 0.25f;
+    private float moveForce = 1f;
     private float turnForce = 100.0f; // Increased for better responsiveness
 
     // Constants for rewards
@@ -38,7 +38,7 @@ public class AgentController : Agent
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stats>();
 
         trainingArea = transform.parent.gameObject;
-        if (trainingArea.name != "TrainingAreaGrid") trainingArea = trainingArea.transform.parent.gameObject;
+       // if (trainingArea.name != "TrainingAreaGrid") trainingArea = trainingArea.transform.parent.gameObject;
 
         environment = trainingArea.transform.Find("Environment").gameObject;
         player = trainingArea.transform.Find("Player").gameObject;
@@ -85,6 +85,7 @@ public class AgentController : Agent
 
     public void ResetEnvironment()
     {
+
         // 1. Move Goal first
         goal.transform.localPosition = FindSafePos(trainingArea.transform.position, 0.74f);
     
@@ -119,8 +120,18 @@ public class AgentController : Agent
     {
         if (inHumanControl) return;
 
-        // 1. Relative Velocity (2 floats)
-        Vector3 localVelocity = transform.InverseTransformDirection(rb.linearVelocity);
+
+        // Position  (2 floats)
+        var position = transform.localPosition;
+        sensor.AddObservation(position.x);
+        sensor.AddObservation(position.z);
+
+        var dir = transform.forward;
+        sensor.AddObservation(dir.x);
+        sensor.AddObservation(dir.z);
+
+        // 1. Velocity (2 floats)
+        var localVelocity = rb.linearVelocity;
         sensor.AddObservation(localVelocity.x);
         sensor.AddObservation(localVelocity.z);
 
@@ -137,15 +148,16 @@ public class AgentController : Agent
 
         //for grid sensor below
 
-        Vector3 agentVelocity = rb.linearVelocity;
-        Vector3 playerVelocity = player.GetComponent<Rigidbody>().linearVelocity;
-        Vector3 relativeVelocity = agentVelocity - playerVelocity;
+//        Vector3 agentVelocity = rb.linearVelocity;
+  //      Vector3 playerVelocity = player.GetComponent<Rigidbody>().linearVelocity;
+    //    Vector3 relativeVelocity = agentVelocity - playerVelocity;
         //3 floats for relative velocity
-        sensor.AddObservation(relativeVelocity.normalized);
+      //  sensor.AddObservation(relativeVelocity.normalized);
 
-        //relative positon of player to agent (3 floats)
-        Vector3 relativePosition = player.transform.localPosition - transform.localPosition;
-        sensor.AddObservation(relativePosition.normalized);
+        //relative positon of player to agent (2 floats)
+    //    var relativePosition = (player.transform.localPosition - transform.localPosition).normalized;
+     //   sensor.AddObservation(relativePosition.x);
+      //  sensor.AddObservation(relativePosition.z);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -161,7 +173,8 @@ public class AgentController : Agent
         if (inHumanControl) return;
 
         // Apply Movement
-        rb.AddForce(transform.forward * move * moveForce, ForceMode.Force);
+        var dir = transform.forward * move * moveForce;
+        rb.linearVelocity = dir;
         if (rb.linearVelocity.magnitude > MAX_MAGNITUDE)
         {
             rb.linearVelocity = rb.linearVelocity.normalized * MAX_MAGNITUDE;
@@ -184,7 +197,7 @@ public class AgentController : Agent
         {
             //Debug.Log(velocityAlignment);
             if (velocityAlignment > 0) {
-                AddReward(velocityAlignment * 0.002f);
+               // AddReward(velocityAlignment * 0.002f);
             } else
             {
                 //AddReward(velocityAlignment * 0.001f);
@@ -196,12 +209,20 @@ public class AgentController : Agent
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("<color=#00ff00>Caught Player</color>");
             SetReward(goalReward);
             stats.AddGoal(episodeNum, 1);
             EndEpisode();
         }
         else if (collision.gameObject.CompareTag("Death"))
         {
+            if (collision.gameObject.name.Contains("Wall"))
+            {
+                Debug.Log("<color=#ff0000>Death - Wall</color>");
+            } else
+            {
+                 Debug.Log("<color=#ff0000>Death - Obstacle</color>");
+            }
             SetReward(deathReward);
             stats.AddGoal(episodeNum, 0);
             EndEpisode();

@@ -167,6 +167,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_Name
       value: TrainingAreaGrid
@@ -266,6 +310,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 533643473117826148, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
@@ -462,6 +550,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_Name
       value: TrainingAreaGrid
@@ -517,6 +649,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 533643473117826148, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
@@ -576,6 +752,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_Name
       value: TrainingAreaGrid
@@ -631,6 +851,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 533643473117826148, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
@@ -690,6 +954,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_Name
       value: TrainingAreaGrid
@@ -747,6 +1055,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_Name
       value: TrainingAreaGrid
@@ -802,6 +1154,50 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 533643473117826148, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 962825503300407143, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_BrainParameters.NumStackedVectorObservations
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_GridSize.z
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_CellScale.z
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].g
+      value: 0.16342616
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322562049499030029, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
+      propertyPath: m_DebugColors.Array.data[2].r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687657450857360904, guid: da36b759899d1af4daf1de11b8a095f2, type: 3}
