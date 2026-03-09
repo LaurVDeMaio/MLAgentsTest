@@ -60,7 +60,7 @@ public class AgentController : Agent
         while (attempts < 20) // Increased attempts for tighter layouts
         {
             // Generate random position within the 18x18 floor (adjust ranges as needed)
-            Vector3 pos = new Vector3(Random.Range(-9.0f, 9.0f), y, Random.Range(-9.0f, 9.0f));
+            Vector3 pos = new Vector3(Random.Range(-8.5f, 8.5f), y, Random.Range(-8.5f, 8.5f));
         
             // 1. Check for physical overlap with walls/obstacles
             var colliders = Physics.OverlapBox(pos + areaCenter, new Vector3(0.5f, 0.25f, 0.5f));
