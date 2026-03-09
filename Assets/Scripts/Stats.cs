@@ -19,6 +19,9 @@ public class Stats : MonoBehaviour
 
     //int ohno, goal = 0;
 
+    float rewardTotal = 0;
+    int totalRewads = 0;
+
     public int StartEpisode()
     {
          numEpisodes++;
@@ -58,7 +61,7 @@ public class Stats : MonoBehaviour
     }
 
 
-    public void AddGoal(int agentEpisode, int x)
+    public void AddGoal(int agentEpisode, int x, float reward)
     {
         //testing code
         // if (x == 1)
@@ -75,6 +78,10 @@ public class Stats : MonoBehaviour
 
         // Debug.Log("Goals: " + goal + " Fails: " + ohno + " Total: " + (goal+ohno));
 
+        rewardTotal += reward;
+        totalRewads++;
+
+        float rewardAverage = (rewardTotal / totalRewads);
 
         //training code
         Goals.RemoveAt(0);
@@ -102,13 +109,23 @@ public class Stats : MonoBehaviour
         }
 
         Debug.Log("Goals: " + total + "/100 -- " + highest + " -- " + ConvertTime(hightime) + " -- " + highepisode);
-
-        if (total == 100)
+        Debug.Log("Reward Average: " + rewardAverage.ToString("F2"));
+        /*if (total == 100)
         {
             Debug.Log("<color=#00ff00>Perfect Score!</color>");
             // end play session
             UnityEditor.EditorApplication.ExitPlaymode();
         }
+        */
+
+        /*
+        if (rewardAverage >= 4.90)
+        {
+            Debug.Log("<color=#00ff00>Reward Average >= 4.90</color>");
+            // end play session
+            UnityEditor.EditorApplication.ExitPlaymode();
+        }
+        */
 
     }
 

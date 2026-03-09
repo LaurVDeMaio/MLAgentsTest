@@ -164,8 +164,6 @@ public class AgentController : Agent
     {
         move = actions.ContinuousActions[0];
         turn = actions.ContinuousActions[1];
-
-        CalcMoveReward();
     }
 
     private void FixedUpdate()
@@ -184,26 +182,6 @@ public class AgentController : Agent
         
     }
 
-    void CalcMoveReward()
-    {
-        // Calculate Reward Logic
-        Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
-        
-        // Dot product: +1 if moving directly toward player, -1 if moving away
-        float velocityAlignment = Vector3.Dot(rb.linearVelocity.normalized, dirToPlayer);
-        
-        // Small incremental reward for moving the right way
-        if(rb.linearVelocity.magnitude > 0.1f) 
-        {
-            //Debug.Log(velocityAlignment);
-            if (velocityAlignment > 0) {
-               // AddReward(velocityAlignment * 0.002f);
-            } else
-            {
-                //AddReward(velocityAlignment * 0.001f);
-            }
-        }
-    }
 
     void OnCollisionEnter(Collision collision)
     {
@@ -211,7 +189,7 @@ public class AgentController : Agent
         {
             Debug.Log("<color=#00ff00>Caught Player</color>");
             SetReward(goalReward);
-            stats.AddGoal(episodeNum, 1);
+            stats.AddGoal(episodeNum, 1, goalReward);
             EndEpisode();
         }
         else if (collision.gameObject.CompareTag("Death"))
@@ -224,7 +202,7 @@ public class AgentController : Agent
                  Debug.Log("<color=#ff0000>Death - Obstacle</color>");
             }
             SetReward(deathReward);
-            stats.AddGoal(episodeNum, 0);
+            stats.AddGoal(episodeNum, 0, deathReward);
             EndEpisode();
         }
 
@@ -234,7 +212,7 @@ public class AgentController : Agent
     {
         Debug.Log("<color=#0000ff>Player Reached Goal</color>");
         SetReward(failReward);
-        stats.AddGoal(episodeNum, 0);
+        stats.AddGoal(episodeNum, 0, failReward);
         EndEpisode();
     }
 
