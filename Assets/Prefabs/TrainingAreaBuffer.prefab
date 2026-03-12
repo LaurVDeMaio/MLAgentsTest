@@ -606,8 +606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: playerBuffer
-  m_ObservableSize: 0
-  m_MaxNumObservables: 0
+  m_ObservableSize: 2
+  m_MaxNumObservables: 2
 --- !u!1 &4127620775545591495
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,8 +797,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: goalBuffer
-  m_ObservableSize: 0
-  m_MaxNumObservables: 0
+  m_ObservableSize: 2
+  m_MaxNumObservables: 2
 --- !u!1 &5536592667357804356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 8
+    VectorObservationSize: 6
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Model: {fileID: 0}
   m_InferenceDevice: 0
   m_BehaviorType: 0
-  m_BehaviorName: Grid
+  m_BehaviorName: Buffer
   TeamId: 0
   m_UseChildSensors: 1
   m_UseChildActuators: 1
@@ -1272,8 +1272,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: obstacleBuffer
-  m_ObservableSize: 0
-  m_MaxNumObservables: 0
+  m_ObservableSize: 2
+  m_MaxNumObservables: 10
 --- !u!1 &7687657450857360904
 GameObject:
   m_ObjectHideFlags: 0
