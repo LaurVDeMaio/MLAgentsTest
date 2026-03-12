@@ -32,6 +32,10 @@ public class AgentController : Agent
 
     public int episodeNum = 0;
 
+    public BufferSensorComponent playerBuffer;
+    public BufferSensorComponent obstacleBuffer;
+    public BufferSensorComponent goalBuffer;
+
     public override void Initialize()
     {
         rb = GetComponent<Rigidbody>();
@@ -52,6 +56,8 @@ public class AgentController : Agent
             var pos = new Vector3(0, 10000, 0);
             obstacles[i] = Instantiate(obstacle, pos, Quaternion.identity, environment.transform);
         }
+
+        
     }
 
     public Vector3 FindSafePos(Vector3 areaCenter, float y, GameObject avoidObject = null, float minDistance = 3.0f)
@@ -120,7 +126,6 @@ public class AgentController : Agent
     {
         if (inHumanControl) return;
 
-
         // Position  (2 floats)
         var position = transform.localPosition;
         sensor.AddObservation(position.x);
@@ -135,29 +140,28 @@ public class AgentController : Agent
         sensor.AddObservation(localVelocity.x);
         sensor.AddObservation(localVelocity.z);
 
-        // // 2. Normalized Distance (1 float)
-        // float dist = Vector3.Distance(player.transform.localPosition, transform.localPosition);
-        // sensor.AddObservation(dist / 20f); 
+        float[] obs = new float[] {
+            player.transform.localPosition.x,
+            player.transform.localPosition.z,
+        };
 
-        // // 3. Direction to player (3 floats)
-        // Vector3 dirToPlayer = (player.transform.localPosition - transform.localPosition).normalized;
-        // sensor.AddObservation(dirToPlayer);
-        
-        // // 4. Agent Forward Direction (3 floats)
-        // sensor.AddObservation(transform.forward);
+        playerBuffer.AppendObservation(obs);
 
-        //for grid sensor below
+        foreach (var obsObj in obstacles)
+        {
+            float[] obsData = new float[] {
+                obsObj.transform.localPosition.x,
+                obsObj.transform.localPosition.z,
+            };
+            obstacleBuffer.AppendObservation(obsData);
+        }
 
-//        Vector3 agentVelocity = rb.linearVelocity;
-  //      Vector3 playerVelocity = player.GetComponent<Rigidbody>().linearVelocity;
-    //    Vector3 relativeVelocity = agentVelocity - playerVelocity;
-        //3 floats for relative velocity
-      //  sensor.AddObservation(relativeVelocity.normalized);
+            float[] goalData = new float[] {
+                goal.transform.localPosition.x,
+                goal.transform.localPosition.z,
+            };
+            goalBuffer.AppendObservation(goalData);
 
-        //relative positon of player to agent (2 floats)
-    //    var relativePosition = (player.transform.localPosition - transform.localPosition).normalized;
-     //   sensor.AddObservation(relativePosition.x);
-      //  sensor.AddObservation(relativePosition.z);
     }
 
     public override void OnActionReceived(ActionBuffers actions)
@@ -216,13 +220,5 @@ public class AgentController : Agent
         EndEpisode();
     }
 
-    public override void Heuristic(in ActionBuffers actionsOut)
-    {
-        /*
-        var continuousActionsOut = actionsOut.ContinuousActions;
-        continuousActionsOut[0] = Input.GetAxis("Vertical");
-        continuousActionsOut[1] = Input.GetAxis("Horizontal");
-        */
-    }
 }
 
