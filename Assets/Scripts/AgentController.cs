@@ -42,8 +42,7 @@ public class AgentController : Agent
         stats = GameObject.FindGameObjectWithTag("Stats").GetComponent<Stats>();
 
         trainingArea = transform.parent.gameObject;
-       // if (trainingArea.name != "TrainingAreaGrid") trainingArea = trainingArea.transform.parent.gameObject;
-
+       
         environment = trainingArea.transform.Find("Environment").gameObject;
         player = trainingArea.transform.Find("Player").gameObject;
         goal = trainingArea.transform.Find("Goal").gameObject;
@@ -140,28 +139,40 @@ public class AgentController : Agent
         sensor.AddObservation(localVelocity.x);
         sensor.AddObservation(localVelocity.z);
 
-        float[] obs = new float[] {
-            player.transform.localPosition.x,
-            player.transform.localPosition.z,
-        };
 
-        playerBuffer.AppendObservation(obs);
-
-        foreach (var obsObj in obstacles)
+        //For Buffer Sensors
+        if(playerBuffer != null)
         {
-            float[] obsData = new float[] {
-                obsObj.transform.localPosition.x,
-                obsObj.transform.localPosition.z,
+            float[] obs = new float[] {
+                player.transform.localPosition.x,
+                player.transform.localPosition.z,
+                player.transform.forward.x,
+                player.transform.forward.z,
             };
-            obstacleBuffer.AppendObservation(obsData);
+
+        playerBuffer.AppendObservation(obs); 
         }
 
+        if(obstacleBuffer != null)
+        {
+            foreach (var obsObj in obstacles)
+            {
+                float[] obsData = new float[] {
+                    obsObj.transform.localPosition.x,
+                    obsObj.transform.localPosition.z,
+                };
+                obstacleBuffer.AppendObservation(obsData);
+            }
+        }
+
+        if(goalBuffer != null) 
+        {
             float[] goalData = new float[] {
                 goal.transform.localPosition.x,
                 goal.transform.localPosition.z,
             };
             goalBuffer.AppendObservation(goalData);
-
+        }
     }
 
     public override void OnActionReceived(ActionBuffers actions)

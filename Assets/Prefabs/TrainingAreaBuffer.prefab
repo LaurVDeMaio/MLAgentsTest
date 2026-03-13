@@ -606,8 +606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SensorName: playerBuffer
-  m_ObservableSize: 2
-  m_MaxNumObservables: 2
+  m_ObservableSize: 4
+  m_MaxNumObservables: 4
 --- !u!1 &4127620775545591495
 GameObject:
   m_ObjectHideFlags: 0
