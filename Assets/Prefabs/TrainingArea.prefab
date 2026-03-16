@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 6
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -1039,7 +1039,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 7039ec0ff3a0e4ce5a94063f24fcf63f, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: MyBehavior
@@ -1065,9 +1065,12 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   inHumanControl: 0
-  obsCount: 1
+  obsCount: 5
   obstacle: {fileID: 336544764184418744, guid: 2d2c8ce8e788644e281188ab4158215c, type: 3}
   episodeNum: 0
+  playerBuffer: {fileID: 0}
+  obstacleBuffer: {fileID: 0}
+  goalBuffer: {fileID: 0}
 --- !u!114 &7535275245468075499
 MonoBehaviour:
   m_ObjectHideFlags: 0
