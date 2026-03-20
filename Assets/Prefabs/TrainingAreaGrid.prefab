@@ -967,7 +967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 8
+    VectorObservationSize: 6
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 2
@@ -976,7 +976,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 776cdd96b41b94d30ab131fd2192c6f0, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Grid
@@ -1002,9 +1002,12 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   inHumanControl: 0
-  obsCount: 1
+  obsCount: 5
   obstacle: {fileID: 336544764184418744, guid: 2d2c8ce8e788644e281188ab4158215c, type: 3}
   episodeNum: 0
+  playerBuffer: {fileID: 0}
+  obstacleBuffer: {fileID: 0}
+  goalBuffer: {fileID: 0}
 --- !u!114 &7535275245468075499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,7 +1037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SensorName: GridSensor
   m_CellScale: {x: 1, y: 0.01, z: 1}
-  m_GridSize: {x: 20, y: 1, z: 20}
+  m_GridSize: {x: 30, y: 1, z: 30}
   m_RotateWithAgent: 1
   m_AgentGameObject: {fileID: 6859992789644645344}
   m_DetectableTags:
@@ -1049,7 +1052,7 @@ MonoBehaviour:
   m_DebugColors:
   - {r: 1, g: 0, b: 0, a: 0}
   - {r: 0.22167921, g: 1, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0.12516737, b: 1, a: 0}
   m_GizmoYOffset: 0
   m_ShowGizmos: 1
   m_CompressionType: 1

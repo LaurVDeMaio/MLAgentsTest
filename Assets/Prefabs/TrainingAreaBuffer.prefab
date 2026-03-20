@@ -1072,7 +1072,7 @@ MonoBehaviour:
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 0}
+  m_Model: {fileID: 5022602860645237092, guid: 233aa3293f1014d049779e32b77ec1cc, type: 3}
   m_InferenceDevice: 0
   m_BehaviorType: 0
   m_BehaviorName: Buffer
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   inHumanControl: 0
-  obsCount: 1
+  obsCount: 5
   obstacle: {fileID: 336544764184418744, guid: 2d2c8ce8e788644e281188ab4158215c, type: 3}
   episodeNum: 0
   playerBuffer: {fileID: 7057217491857780914}

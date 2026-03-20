@@ -1065,7 +1065,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   inHumanControl: 0
-  obsCount: 5
+  obsCount: 1
   obstacle: {fileID: 336544764184418744, guid: 2d2c8ce8e788644e281188ab4158215c, type: 3}
   episodeNum: 0
   playerBuffer: {fileID: 0}

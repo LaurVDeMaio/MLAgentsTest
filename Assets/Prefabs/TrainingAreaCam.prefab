@@ -324,7 +324,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0770d23db82194db4bbf5afd6af6832a, type: 2}
+  - {fileID: 2100000, guid: e4fab8beb13314257acacb886696107c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -518,7 +518,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0770d23db82194db4bbf5afd6af6832a, type: 2}
+  - {fileID: 2100000, guid: e4fab8beb13314257acacb886696107c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_Grayscale: 1
   m_ObservationType: 0
   m_RuntimeCameraEnable: 0
-  m_ObservationStacks: 2
+  m_ObservationStacks: 1
   m_Compression: 1
 --- !u!1 &4127620775545591495
 GameObject:
@@ -776,7 +776,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0770d23db82194db4bbf5afd6af6832a, type: 2}
+  - {fileID: 2100000, guid: e4fab8beb13314257acacb886696107c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1152,7 +1152,7 @@ MonoBehaviour:
   hasUpgradedFromAgentParameters: 1
   MaxStep: 5000
   inHumanControl: 0
-  obsCount: 2
+  obsCount: 5
   obstacle: {fileID: 336544764184418744, guid: 2d2c8ce8e788644e281188ab4158215c, type: 3}
   episodeNum: 0
   playerBuffer: {fileID: 0}
@@ -1238,7 +1238,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0770d23db82194db4bbf5afd6af6832a, type: 2}
+  - {fileID: 2100000, guid: e4fab8beb13314257acacb886696107c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
